@@ -1,0 +1,191 @@
+:root {
+    --cor-texto-principal: #FFFFFF;
+    --cor-texto-secundaria:#C0C0C0;
+    --cor-botao:     #167BF7;
+    --cor-fundo:     #00030C;
+    --cor-botao-efeito: rgb(57, 153, 243);
+
+    --fonte-principal: 'Inter';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto-principal);
+    /* font-family: var(--fonte-principal);
+    font-size: 16px;
+    font-weight: 400; */
+    font: 400 16px var(--fonte-principal);
+}
+
+.principal {
+    background-image: url("assets/Background.png");
+    background-repeat: no-repeat;   /*não repita background-image*/
+    background-size: contain;   /*pega todo o container e o preenche*/
+    align-items: center;
+    text-align: center;
+}
+/* 
+INSERÇÃO DE IMAGENS - duas maneiras diferentes:
+com tag <img> no HTML: Se fizer sentido para o usuário, para colocar um texto alternativo
+com propriedade backgrouns-image no CSS : sem informação relevante; uso apenas decorativo
+*/
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container__div {
+    margin: 0 6em;  
+}
+    /* margin: top-bottom left-right */ 
+    /*
+I. Margins criam um espaçamento ao redor do elemento.
+
+II. Paddings criam um espaçamento dentro do elemento.
+- Padding afasta o conteúdo da borda e não um elemento do outro.
+
+III. É possível configurar valores de margins diferentes para cada lado
+    */
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__imagemCombo {
+    margin: 1em 0 2em 0;
+}
+
+.container__botao {
+    background-color: var(--cor-botao);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--cor-texto-principal);
+    display: block;
+    text-decoration: none;
+    margin-bottom: 1em;
+}
+/* PSEUDO-CLASSE 
+propriedade que é adicionada ao final dos seletores 
+que especifica o estado que esse elemento está::after
+:hover
+:focus
+:active
+:visited
+:link
+:root  -> o root também é uma pseudo-classe!
+
+seletor:pseudo-classe {
+  propriedade: valor;
+}
+*/
+.container__botao:hover {
+    background-color: var(--cor-botao-efeito);
+    color: var(--cor-fundo);
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--cor-texto-principal);
+    /* display: inline-block;
+    margin-top: 1em; */
+}
+
+.container__aviso {
+    color: var(--cor-texto-secundaria);
+    font-size: 12px;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.secundario__div {
+    padding: 2em;
+}
+
+.secundario__imagem{
+    width: 80%;
+}
+
+.secundario__titulo {
+    font: 700 48px;
+    color: var(--cor-texto-principal);
+    margin-bottom: 0.1em;
+}
+
+.secundario__texto {
+    color: var(--cor-texto-secundaria);
+}
+
+.secundario_botao {
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.dispositivos__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;
+}
+
+.dispositivos {
+    text-align: center;
+}
+
+.dispositivos__titulo {
+    font-size: 48px;
+    color: var(--cor-texto-principal);
+  
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--cor-texto-principal);
+}
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+.lista__link a{
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
+}
+
+.rodape__texto {
+    margin: 1em 0;
+    color: var(--cinza-secundario);
+    font-size: 14px;
+}
+
+.rodape__logo {
+    margin-bottom: 2em;
+}
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.lista__link a:hover {
+    color: var(--cor-botao);
+}
+
+.lista__link a:active {
+    color: purple;
+}
+
